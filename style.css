@@ -88,8 +88,8 @@ body {
   width: 90%;
   height: 90%;
 
-  max-width: 900px;   /* prevents giant scaling */
-  max-height: 600px;
+max-width: 1400px;
+max-height: 900px;
 
   margin: auto;
 
