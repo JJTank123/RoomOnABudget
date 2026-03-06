@@ -92,7 +92,7 @@ const furnitureData = {
         width:250
       },
       { name:"Standard Couch 3", price:900, img:"Standard/Couch/Standard_couch3.png",
-        flippedImg:"Standard/Couch/Standardcouch3-f.png",
+        flippedImg:"Standard/Couch/Standard_couch3-f.png",
         rearImg:"Standard/Couch/Standard_couch3_back.png",
         rearImgF:"Standard/Couch/Standard_couch3_back-f.png",
         width:250
