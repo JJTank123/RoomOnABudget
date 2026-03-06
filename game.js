@@ -656,25 +656,28 @@ changeViewBtn.addEventListener('click', () => {
 // FINISH ROOM
 // =======================
 finishBtn.addEventListener("click", () => {
+  const drawer = document.getElementById("drawer");
+  const drawerStatus = document.getElementById("drawerStatus");
+  const codeElem = document.getElementById("drawerCode");
+
   if (budget >= 0) {
     // ✅ Within budget
-    const drawer = document.getElementById("drawer");
-    const codeElem = document.getElementById("drawerCode");
-
-    // Generate a simple random 4-digit code
-    const code = Math.floor(1000 + Math.random() * 9000);
-    codeElem.textContent = code;
-
-    // Show drawer
-    drawer.style.display = "block";
-
-    // Optional: give a visual effect
-    drawer.style.animation = "fadeIn 1s";
+    const code = Math.floor(1000 + Math.random() * 9000); // 4-digit code
+    codeElem.textContent = `Code: ${code}`;
+    drawerStatus.textContent = "🔓 Drawer Unlocked!";
+    drawer.classList.add("unlocked");
+    drawer.style.display = "flex";
 
     alert("✅ You stayed within budget! Drawer unlocked!");
   } else {
     alert("❌ Over Budget! Try Again");
   }
+});
+
+// Close drawer button
+document.getElementById("closeDrawer").addEventListener("click", () => {
+  const drawer = document.getElementById("drawer");
+  drawer.style.display = "none";
 });
 
 // =======================
